@@ -23,7 +23,7 @@ steps:
 
 - script: |
     mvn install
-  displayName: 'Maven install and Jar creation'
+  displayName: 'Jar file creation'
 
 
 - task: Docker@2
