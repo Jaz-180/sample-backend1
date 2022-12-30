@@ -23,5 +23,13 @@ steps:
 
 - script: |
     mvn install
-  displayName: 'Jar file created'
+  displayName: 'Maven install and Jar creation'
 
+
+- task: Docker@2
+  inputs:
+    repository: jaseem180/sample-app-backend1
+    command: 'buildAndPush'
+    Dockerfile: './Dockerfile'
+    tags: latest
+    containerRegistry: Docker-hub
